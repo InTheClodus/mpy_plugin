@@ -51,7 +51,7 @@ class MpyPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
     @JvmStatic
     fun registerWith(registrar: PluginRegistry.Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "flutter_pay_plugins")
+      val channel = MethodChannel(registrar.messenger(), "mpy_plugin")
       channel.setMethodCallHandler(MpyPlugin())
       context = registrar.context()
       MpyPlugin.registrar = registrar
